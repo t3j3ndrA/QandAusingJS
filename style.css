@@ -1,0 +1,99 @@
+/* global css */
+/* golden shoe font */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+/* Question font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
+:root {
+  --golden-font: "Lobster", cursive;
+  --title-spacing: 0.17rem;
+  --clr-golden: #c3a600;
+  --normal-font: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--normal-font);
+}
+
+body {
+  background-color: rgba(153, 142, 142, 0.253);
+}
+
+h1 {
+  font-family: var(--golden-font);
+  letter-spacing: var(--title-spacing);
+  color: var(--clr-golden);
+  grid-column-start: 2;
+  grid-column-end: 3;
+  text-align: center;
+  margin: 20px;
+}
+/* global css ends */
+
+/* local css goes here */
+.container {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* questions styling */
+.question-box {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: white;
+  padding: 1.3rem;
+  margin-bottom: 8px;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.705);
+}
+
+.question {
+  margin: 5px;
+}
+
+.answer {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: 10px;
+}
+/*  */
+
+/* controling displaying */
+.hide {
+  display: none;
+}
+
+.show {
+    visibility: visible;
+}
+/*  */
+
+/* button styling */
+.btn {
+  padding: 0;
+  color: var(--clr-golden);
+  border: 0ch;
+  font-size: 1.2rem;
+  background-color: inherit;
+  transition: transform 0.25s linear;
+}
+
+.btn:hover{
+    transform: rotate(90deg);
+}
+/*  */
+
+/* responsive desingninig */
+@media screen and (max-width: 834px) {
+  .container {
+    grid-template-columns: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+/*  */
